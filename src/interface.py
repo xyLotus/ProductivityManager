@@ -238,10 +238,10 @@ def call_cmd(cmd_interface: CMDInterface, base: str, args=[]):
     except KeyboardInterrupt:
         print('\n$!')
         exit(0)
-    #except Exception as e:
+    except Exception as e:
         # You may think "that's bullshit, you should handle errors!"
         # my answer is: no, I'm too lazy. Git gud.
-    #   print('Internal-Error: ', e)
+      print(f'{clr_red("Internal-Error")}: ', e)
 
 def main():
     # ? => Start Char
